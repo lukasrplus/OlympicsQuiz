@@ -13,8 +13,13 @@
   </header>
 
 
-  <form>
-    <input type="text" name="name" placeholder="Please enter your name to get started..."><br>
-    <a href="/question.html">
-    <button type="button">Click to Start!</button></a>
-  </form>
+  <%= form_tag create_user_url, method: 'post' do %>
+
+    <%= label_tag '' %>
+    <%= text_field_tag 'Name', nil, placeholder: 'Please enter your name to get started...' %>
+    <br>
+    <%= button_tag 'Click to start!' %>
+
+
+  <% end %>
+
