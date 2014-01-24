@@ -31,7 +31,7 @@ html {
 body {
     height: 100%;
     font-family: 'Yanone Kaffeesatz', sans-serif;
-  background: white;
+    background: white;
 }
 
 
@@ -39,6 +39,14 @@ body {
   margin-top: 50px;
   text-align: center;
 
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: bold;
+  // margin-top: 20px;
+  color: #C76666;
+  text-align: center;
 }
 
 header {
@@ -101,17 +109,22 @@ form {
 .question_header {
   margin-top: 15px;
   margin-bottom: 15px;
+
+    h1 {
+      font-size: 90px;
+    }
 }
 
 
 
 .question_picture {
   text-align: center;
-  margin-top: 5%;
+  margin-top: 2%;
   ul {
-    float: left;
+        float: left;
         width: 100%;
         font-size: 0;
+        margin-bottom: 1%;
 
 
     li {

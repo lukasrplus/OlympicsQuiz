@@ -1,2 +1,21 @@
-<h1>Questions#show</h1>
-<p>Find me in app/views/questions/show.html.erb</p>
+  <header class="question_header">
+    <%= image_tag("/assets/rings_blue.png", width: '15%') %>
+    <!-- <h1>Olym<span class='pics'>pics</span> Quiz</h1> -->
+
+  </header>
+
+  <div class="question_picture">
+    <ul class="first">
+
+      <li><%= image_tag("/assets/#{@q.picture_a}", class: 'first_image') %></li>
+      <li><%= image_tag("/assets/#{@q.picture_b}", class: 'second_image') %></li>
+      <li><%= image_tag("/assets/#{@q.picture_c}", class: 'third_image') %></li>
+
+    </ul>
+
+  </div>
+
+  <h2>Where were these pictures taken?</h2>
+
+
+

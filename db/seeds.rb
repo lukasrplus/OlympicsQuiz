@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+questions = Question.create([{ index: '1', picture_a: 'question1a.jpg', picture_b: 'question1b.jpg', picture_c: 'question1c.jpg'}])

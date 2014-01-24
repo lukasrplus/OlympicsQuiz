@@ -17,6 +17,9 @@
 
     <%= label_tag '' %>
     <%= text_field_tag 'Name', nil, placeholder: 'Please enter your name to get started...' %>
+
+    <%= hidden_field_tag 'question_id', "1" %>
+
     <br>
     <%= button_tag 'Click to start!' %>
 
