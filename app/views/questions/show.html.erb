@@ -15,14 +15,16 @@
 
   </div>
 
-  <h2>Where were these pictures taken?</h2>
+  <h2>Guess this Olympic location.</h2>
+
+
 
 
   <% next_page = @q.index + 1 %>
   <%= form_tag question_url(next_page), method: 'get' do %>
 
   <br>
-  <%= button_tag 'Submit your answer' %>
+  <%= button_tag 'Submit your answer', class: 'next_page' %>
 
   <% end %>
 

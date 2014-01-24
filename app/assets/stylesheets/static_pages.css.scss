@@ -100,6 +100,10 @@ form {
     border: none;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 22px;
+
+    &.next_page {
+      width: 170px;
+    }
   }
 
 }
