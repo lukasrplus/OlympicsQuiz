@@ -8,6 +8,10 @@ class QuestionsController < ApplicationController
       @q = Question.find_by(:id => params[:id])
     end
 
+    @a = Answer.where(:question_id => @q.index)
+
+    @u = User.find_by(:id => session[:u_id])
+
   end
 
 end

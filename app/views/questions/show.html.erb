@@ -19,9 +19,18 @@
 
 
 
-
   <% next_page = @q.index + 1 %>
+
   <%= form_tag question_url(next_page), method: 'get' do %>
+
+    <% @a.each do |answer| %>
+
+      <%= label_tag do %>
+      <%= radio_button_tag(answer.content, answer.correct, false) %>
+      <%= answer.content %>
+      <% end %>
+
+    <% end %>
 
   <br>
   <%= button_tag 'Submit your answer', class: 'next_page' %>
