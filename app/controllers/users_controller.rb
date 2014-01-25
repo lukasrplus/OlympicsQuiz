@@ -7,7 +7,12 @@ def create
   u.name = params[:Name]
   u.save
 
-  u.id = session[:u_id]
+  s = Score.new
+  s.user_id = u.id
+  s.score = 0
+  s.save
+
+  session[:u_id] = u.id
 
   quiz = Quiz.new
   quiz.user_id = u.id

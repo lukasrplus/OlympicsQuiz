@@ -19,16 +19,27 @@
 
 
 
+
+<!-- NEW VERSION -->
+
   <% next_page = @q.index + 1 %>
 
-  <%= form_tag question_url(next_page), method: 'get' do %>
+  <% user = User.find_by(:id => session[:u_id]) %>
+
+  <%= form_tag update_score_url, method: 'patch' do %>
 
     <% @a.each do |answer| %>
 
       <%= label_tag do %>
-      <%= radio_button_tag(answer.question_id, answer.values) %>
+      <%= radio_button_tag('answer_code', answer.values) %>
       <%= answer.content %> <br>
       <% end %>
+
+
+      <%= hidden_field_tag 'page_index', next_page %>
+
+      <%= hidden_field_tag 'user_id', user.id %>
+
 
     <% end %>
 
@@ -36,8 +47,6 @@
   <%= button_tag 'Submit your answer', class: 'next_page' %>
 
   <% end %>
-
-
 
 
 

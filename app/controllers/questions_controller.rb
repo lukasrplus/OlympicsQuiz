@@ -12,6 +12,8 @@ class QuestionsController < ApplicationController
 
     @u = User.find_by(:id => session[:u_id])
 
+    # s = Score.find_by(:user_id = @u.id)
+
   end
 
 end

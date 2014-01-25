@@ -5,6 +5,9 @@ OlympicsQuiz::Application.routes.draw do
 
   post '/users' => 'users#create', as: 'create_user'
 
+  patch 'scores' => 'scores#update', as: 'update_score'
+
+
   get '/questions/:id' => 'questions#show', as: 'question'
 
 
