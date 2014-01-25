@@ -16,8 +16,11 @@ group :production do
   gem 'rails_12factor'
 end
 
+
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+  gem 'sass-rails', '~> 4.0.0'
+  gem 'compass-rails'
+
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
