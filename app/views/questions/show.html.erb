@@ -26,8 +26,8 @@
     <% @a.each do |answer| %>
 
       <%= label_tag do %>
-      <%= radio_button_tag(answer.content, answer.correct, false) %>
-      <%= answer.content %>
+      <%= radio_button_tag(answer.question_id, answer.values) %>
+      <%= answer.content %> <br>
       <% end %>
 
     <% end %>
