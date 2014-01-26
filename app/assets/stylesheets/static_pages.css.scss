@@ -380,6 +380,24 @@ $width: 275px;
     margin-top: 10px;
     font-size: 35px;
   }
+
+  .twitter {
+    text-decoration: none;
+    color: $background_color;
+
+    a {
+      text-decoration: none;
+
+      &:visited {
+        color: $background_color;
+      }
+
+      &:hover {
+        color: #4099FF;
+      }
+    }
+
+  }
 }
 
 // END MEDAL STYLING
