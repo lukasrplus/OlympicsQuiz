@@ -48,6 +48,31 @@
   <% end %>
 
 
+<% if params[:correct] == 'true' %>
+<div class="question_count">
+You're last answer was right.
+</div>
+<% elsif @q.index == 1%>
+
+<% else %>
+<div class="question_count">
+You're last answer was wrong.
+</div>
+<% end %>
+
+
+
+<% if @q.index < 10 %>
+<div class="question_count">
+<%= 10 - @q.index %> more questions to go.
+</div>
+<% else %>
+<div class="question_count">
+This is the last question.
+</div>
+<% end %>
+
+
 
 
 

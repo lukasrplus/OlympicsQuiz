@@ -14,6 +14,7 @@ def create
 
   session[:u_id] = u.id
 
+
   quiz = Quiz.new
   quiz.user_id = u.id
   quiz.save
