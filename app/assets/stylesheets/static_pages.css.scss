@@ -24,6 +24,7 @@
 $background_color: #50637F;
 
 
+
 html {
   height: 100%;
 }
@@ -180,7 +181,9 @@ form {
 
 
 @import "compass/css3";
-
+$bronze: #CD7F32;
+$gold: #D4AF37;
+$silver: #ACACAC;
 
 
 body {
@@ -214,7 +217,7 @@ $width: 275px;
 
 
 %one-side {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
     position: absolute;
     top: 0;
     left: 0;
@@ -222,26 +225,90 @@ $width: 275px;
     border-radius: 50%;
     width: $width;
     height: $width;
-    background:#CC8135;
     text-align: center;
     line-height: 28px;
     @include backface-visibility(hidden);
 }
 
-.front {
+.gold_front {
     @extend %one-side;
     font-size: 150px;
     font-weight: bold;
+    background:$gold;
     line-height: 75px;
     color: white;
     text-align: center;
 }
 
-.back {
+.gold_back {
     @extend %one-side;
     @include rotateY(180deg);
     font-size: 150px;
     font-weight: bold;
+    background:$gold;
+    line-height: 75px;
+    color: white;
+    text-align: center;
+}
+
+.silver_front {
+    @extend %one-side;
+    font-size: 150px;
+    font-weight: bold;
+    background:$silver;
+    line-height: 75px;
+    color: white;
+    text-align: center;
+}
+
+.silver_back {
+    @extend %one-side;
+    @include rotateY(180deg);
+    font-size: 150px;
+    font-weight: bold;
+    background:$silver;
+    line-height: 75px;
+    color: white;
+    text-align: center;
+}
+
+.bronze_front {
+    @extend %one-side;
+    font-size: 150px;
+    font-weight: bold;
+    background:$bronze;
+    line-height: 75px;
+    color: white;
+    text-align: center;
+}
+
+.bronze_back {
+    @extend %one-side;
+    @include rotateY(180deg);
+    font-size: 150px;
+    font-weight: bold;
+    background:$bronze;
+    line-height: 75px;
+    color: white;
+    text-align: center;
+}
+
+.no_medal_front {
+    @extend %one-side;
+    font-size: 100px;
+    font-weight: bold;
+    line-height: 75px;
+    background: #26CC64;
+    color: white;
+    text-align: center;
+}
+
+.no_medal_back {
+    @extend %one-side;
+    @include rotateY(180deg);
+    font-size: 100px;
+    font-weight: bold;
+    background: #26CC64;
     line-height: 75px;
     color: white;
     text-align: center;
