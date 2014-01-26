@@ -140,12 +140,14 @@ header {
 
 .question_form {
     margin-top: 20px;
-    text-align: center;
+
     color: $background_color;
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 32px;
+    line-height: 40px;
+    margin-left: 40%;
 
     input[type=radio] {
+      text-align: left;
       display: inline;
       vertical-align: middle;
 
@@ -160,12 +162,15 @@ header {
     button {
       width: 130px;
       height: 40px;
+      text-align: center;
       border-radius: 5px;
       background-color: #C76666;
       color: white;
       border: none;
       font-family: 'Yanone Kaffeesatz', sans-serif;
       font-size: 22px;
+      margin-left: 2%;
+      margin-top: 15px;
 
       &.next_page {
         width: 170px;
