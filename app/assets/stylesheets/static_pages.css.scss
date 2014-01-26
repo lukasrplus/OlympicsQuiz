@@ -107,6 +107,7 @@ header {
       // margin-left: 25px;
       text-align: center;
       // border-radius: 5px;
+      border-radius: none;
       font-family: 'Yanone Kaffeesatz', sans-serif;
       font-size: 20px;
       padding-left: 10px;
@@ -169,7 +170,7 @@ header {
       border: none;
       font-family: 'Yanone Kaffeesatz', sans-serif;
       font-size: 22px;
-      margin-left: 2%;
+      margin-left: 0%;
       margin-top: 15px;
 
       &.next_page {
@@ -432,6 +433,10 @@ $width: 275px;
 @media only screen and (max-width: 550px) {
   header {
 
+    body {
+      // height:100%
+    }
+
     h1 {
       font-size: 75px;
     }
@@ -446,6 +451,34 @@ $width: 275px;
       margin-top: 30px;
     }
 
+  }
+
+  footer {
+    display:none;
+  }
+
+
+
+  .homepage_form {
+    button {
+      font-size: 18px;
+    }
+  }
+
+  h2 {
+    font-size: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align:center;
+  }
+
+
+  .question_form {
+    width: 100%;
+    margin-left: 26%;
+    font-size: 28px;
+    line-height: 35px;
+    margin-top: 5px;  
   }
 
 
@@ -470,6 +503,12 @@ $width: 275px;
     }
   }
 
+}
+
+.base {
+  margin-left: 9%;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 }
