@@ -24,7 +24,14 @@
 <div class="results">
 	<!-- INSERT RUBY FOR GOLD -->
 	<h2>You won the GOLD!</h2>
-	<p>Official Score: 10/10</p> <br>
+
+	<% @user = User.last %>
+	<% @user_score_sheet = Score.find_by_id(@user.id) %>
+	<% @score_times_four = @user_score_sheet.score.to_i %>
+	<% @score_out_of_ten = @score_times_four/4 %>
+
+
+	<p>Official Score: <%= @score_out_of_ten %>/10</p> <br>
 	<p><i class="fa fa-twitter-square fa-lg"></i> <i class="fa fa-facebook-square fa-lg"></i></p>
 
 </div>
