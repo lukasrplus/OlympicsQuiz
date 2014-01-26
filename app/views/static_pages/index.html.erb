@@ -13,7 +13,7 @@
   </header>
 
 
-  <%= form_tag create_user_url, method: 'post' do %>
+  <%= form_tag create_user_url, class: 'homepage_form', method: 'post' do %>
 
     <%= label_tag '' %>
     <%= text_field_tag 'Name', nil, placeholder: 'Please enter your name to get started...' %>

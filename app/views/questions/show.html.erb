@@ -24,13 +24,14 @@
 
   <% user = User.find_by(:id => session[:u_id]) %>
 
-  <%= form_tag update_score_url, method: 'patch' do %>
+  <%= form_tag update_score_url, class: 'question_form', method: 'patch' do %>
 
     <% @a.each do |answer| %>
 
       <%= label_tag do %>
       <%= radio_button_tag('answer_code', answer.values) %>
       <%= answer.content %> <br>
+
       <% end %>
 
 
@@ -41,7 +42,7 @@
 
     <% end %>
 
-  <br>
+
   <%= button_tag 'Submit your answer', class: 'next_page' %>
 
   <% end %>
