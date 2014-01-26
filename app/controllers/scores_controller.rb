@@ -12,10 +12,11 @@ class ScoresController < ApplicationController
 
     s.save
 
-
-
-    redirect_to question_url(params[:page_index])
-
+    if params[:page_index] == '11'
+    	redirect_to results_url
+    else 
+    	redirect_to question_url(params[:page_index])
+    end 
 
 
   end

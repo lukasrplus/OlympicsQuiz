@@ -17,6 +17,8 @@ class QuestionsController < ApplicationController
   end
 
   def result
+    @user = User.all
+    @score = Score.find_by(:user_id => @u.id)
   end 
 
 end
