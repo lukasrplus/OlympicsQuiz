@@ -12,7 +12,6 @@
 
 <body>
 
-
 	<% @user = User.last %>
 	<% @user_score_sheet = Score.find_by_id(@user.id) %>
 	<% @score_times_four = @user_score_sheet.score.to_i %>
@@ -87,8 +86,6 @@
 	<p><i class="fa fa-twitter-square fa-lg"></i> <i class="fa fa-facebook-square fa-lg"></i></p>
 
 </div>
-
-
 
 
 </body>
