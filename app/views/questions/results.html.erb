@@ -13,72 +13,72 @@
 <body>
 
 	<% @user = User.last %>
-	<% @user_score_sheet = Score.find_by_id(@user.id) %>
-	<% @score_times_four = @user_score_sheet.score.to_i %>
+	<% @user_score_sheet = Score.find_by(:user_id => @user.id) %>
+	<% @score_times_four = @user_score_sheet.score %>
 	<% @score_out_of_ten = @score_times_four/4 %>
 
 <div class="base">
     <div class="medal">
         <!-- Is THIS your card? -->
 
-    <% if @score_out_of_ten == 10 %>	
+    <% if @score_out_of_ten == 10 %>
 		<div class="gold_front"><p>1</p><img src="/assets/olympic_rings_white.png" alt="" width='100'></div>
         <div class="gold_back"><p>1</p><img src="/assets/olympic_rings_white.png" alt="" width='100'></div>
 	<% end %>
 
-	<% if @score_out_of_ten <= 5 %>	
+	<% if @score_out_of_ten <= 5 %>
 		<div class="no_medal_front"><p>SHAME</p><img src="/assets/olympic_rings_white.png" alt="" width='100'></div>
         <div class="no_medal_back"><p>SHAME</p><img src="/assets/olympic_rings_white.png" alt="" width='100'></div>
 	<% end %>
 
-	<% if @score_out_of_ten == 8 %>	
+	<% if @score_out_of_ten == 8 %>
 		<div class="silver_front"><p>2</p><img src="/assets/olympic_rings_white.png" alt="" width='100'></div>
         <div class="silver_back"><p>2</p><img src="/assets/olympic_rings_white.png" alt="" width='100'></div>
 	<% end %>
 
-	<% if @score_out_of_ten == 9 %>	
+	<% if @score_out_of_ten == 9 %>
 		<div class="silver_front"><p>2</p><img src="/assets/olympic_rings_white.png" alt="" width='100'></div>
         <div class="silver_back"><p>2</p><img src="/assets/olympic_rings_white.png" alt="" width='100'></div>
 	<% end %>
 
-	<% if @score_out_of_ten == 6 %>	
-		<div class="bronze_front"><p>3</p><img src="/assets/olympic_rings_white.png" alt="" width='100'></div>
-        <div class="bronze_back"><p>3</p><img src="/assets/olympic_rings_white.png" alt="" width='100'></div>		
-	<% end %>
-
-	<% if @score_out_of_ten == 7 %>	
+	<% if @score_out_of_ten == 6 %>
 		<div class="bronze_front"><p>3</p><img src="/assets/olympic_rings_white.png" alt="" width='100'></div>
         <div class="bronze_back"><p>3</p><img src="/assets/olympic_rings_white.png" alt="" width='100'></div>
 	<% end %>
-     
+
+	<% if @score_out_of_ten == 7 %>
+		<div class="bronze_front"><p>3</p><img src="/assets/olympic_rings_white.png" alt="" width='100'></div>
+        <div class="bronze_back"><p>3</p><img src="/assets/olympic_rings_white.png" alt="" width='100'></div>
+	<% end %>
+
     </div>
  </div>
 
 <div class="results">
 	<!-- INSERT RUBY FOR GOLD -->
 
-	
-	<% if @score_out_of_ten == 10 %>	
+
+	<% if @score_out_of_ten == 10 %>
 		<h2>You won the GOLD!</h2>
 	<% end %>
 
-	<% if @score_out_of_ten <= 5 %>	
+	<% if @score_out_of_ten <= 5 %>
 		<h2>You did not place!</h2>
 	<% end %>
 
-	<% if @score_out_of_ten == 8 %>	
+	<% if @score_out_of_ten == 8 %>
 		<h2>You won SILVER!</h2>
 	<% end %>
 
-	<% if @score_out_of_ten == 9 %>	
+	<% if @score_out_of_ten == 9 %>
 		<h2>You won SILVER!</h2>
 	<% end %>
 
-	<% if @score_out_of_ten == 6 %>	
+	<% if @score_out_of_ten == 6 %>
 		<h2>You won BRONZE!</h2>
 	<% end %>
 
-	<% if @score_out_of_ten == 7 %>	
+	<% if @score_out_of_ten == 7 %>
 		<h2>You won BRONZE!</h2>
 	<% end %>
 
