@@ -12,13 +12,18 @@ class QuestionsController < ApplicationController
 
     @u = User.find_by(:id => session[:u_id])
 
-    # s = Score.find_by(:user_id = @u.id)
+
+
+    index_of_previous_question = @q.id-1
+    previous_question = Question.find_by(:id => index_of_previous_question)
+
+
 
   end
 
   def result
     @user = User.all
     @score = Score.find_by(:user_id => @u.id)
-  end 
+  end
 
 end
