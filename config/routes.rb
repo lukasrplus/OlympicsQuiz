@@ -1,6 +1,7 @@
 OlympicsQuiz::Application.routes.draw do
 
   get "questions/show"
+  get "questions/results", as: 'results'
   root :to => 'static_pages#index'
 
   post '/users' => 'users#create', as: 'create_user'

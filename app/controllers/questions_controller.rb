@@ -16,4 +16,7 @@ class QuestionsController < ApplicationController
 
   end
 
+  def result
+  end 
+
 end
