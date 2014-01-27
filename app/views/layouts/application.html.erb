@@ -10,20 +10,23 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,200,700' rel='stylesheet' type='text/css'>
-	
+
 	<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
+  <div class="body_content">
+
 <%= yield %>
 
+  </div>
 
-<footer>
+<!-- <footer>
 
 	<p>Olympic Quiz 2014</p>
-	
-</footer>
+
+</footer> -->
 
 </body>
 </html>

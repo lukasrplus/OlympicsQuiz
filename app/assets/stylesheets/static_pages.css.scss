@@ -35,10 +35,15 @@ body {
     background: white;
 }
 
+.body_content {
+  z-index: 10;
+}
+
 // FOOTER STYLING
 
 footer {
-  position:absolute;
+  // float: right;
+  position: fixed;
   bottom:0;
   left: 0;
   width:100%;
@@ -236,6 +241,18 @@ header {
   color: $background_color;
 }
 
+.question_wrong {
+  text-align: center;
+  margin-top: 15px;
+  color: #C76666;
+
+}
+
+.question_right {
+  text-align: center;
+  margin-top: 15px;
+  color: #00B233;
+}
 
 // MEDAL STYLING
 
@@ -456,6 +473,7 @@ $width: 275px;
 
   footer {
     display:none;
+
   }
 
 
@@ -479,7 +497,7 @@ $width: 275px;
     margin-left: 26%;
     font-size: 28px;
     line-height: 35px;
-    margin-top: 5px;  
+    margin-top: 5px;
   }
 
 

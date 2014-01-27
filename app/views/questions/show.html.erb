@@ -49,13 +49,13 @@
 
 
 <% if params[:correct] == 'true' %>
-<div class="question_count">
+<div class="question_right">
 You're last answer was right.
 </div>
 <% elsif @q.index == 1%>
 
 <% else %>
-<div class="question_count">
+<div class="question_wrong">
 You're last answer was wrong.
 </div>
 <% end %>
